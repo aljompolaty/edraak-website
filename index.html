@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="إدراك الهندسية — توريد وتركيب وصيانة أنظمة التكييف والتبريد والأعمال الكهربائية والمولدات. | EDRAAK Engineering — supply, installation and maintenance of air conditioning, refrigeration, electrical works and generators.">
+<title>إدراك الهندسية | EDRAAK Engineering</title>
+<style>
+@font-face{font-family:'Thmanyah Sans';src:url('fonts/thmanyahsans-Regular.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Thmanyah Sans';src:url('fonts/thmanyahsans-Medium.otf') format('opentype');font-weight:500;font-display:swap}
+@font-face{font-family:'Thmanyah Sans';src:url('fonts/thmanyahsans-Bold.otf') format('opentype');font-weight:700;font-display:swap}
+@font-face{font-family:'Thmanyah Sans';src:url('fonts/thmanyahsans-Black.otf') format('opentype');font-weight:900;font-display:swap}
+:root{--navy-950:#0B1D2E;--navy:#112C46;--orange:#ED6725;--action:#C94D12;--surface:#F3F6F9;--border:#D5DEE7;--text:#112C46;--text2:#4A5D70;--focus:#1F5FA8;--error:#B42318;--radius:12px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Thmanyah Sans',system-ui,'Noto Sans Arabic',sans-serif;color:var(--text);background:#fff;line-height:1.7;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;padding-top:max(12px,env(safe-area-inset-top))}
+.bar img{height:44px;width:auto;background:#fff;border-radius:8px;padding:4px 8px}
+nav{display:flex;align-items:center;gap:16px}
+nav a{text-decoration:none;font-size:15px;color:#D5DEE7}
+nav a:hover{color:#fff}
+.lang{background:transparent;color:#fff;border:1.5px solid #8FA6BA;border-radius:999px;padding:6px 14px;font:700 14px 'Thmanyah Sans',sans-serif;cursor:pointer;min-height:40px}
+.hero{background:var(--navy);color:#fff;padding:72px 0 88px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset-inline-end:-80px;top:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(237,103,37,.18),transparent 70%)}
+.hero h1{font-weight:900;font-size:clamp(36px,6vw,60px);line-height:1.2;margin:0 0 16px}
+.tag{color:var(--orange);font-weight:700;font-size:clamp(18px,2.6vw,22px);margin:0 0 20px}
+.hero p.lead{color:#D5DEE7;font-size:18px;max-width:640px;margin:0 0 32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 17px 'Thmanyah Sans',sans-serif;padding:14px 28px;border-radius:8px;border:0;text-decoration:none;cursor:pointer;min-height:48px}
+.btn-primary{background:var(--action);color:#fff}
+.btn-primary:hover{filter:brightness(.92)}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #8FA6BA}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:72px 0}
+section.alt{background:var(--surface)}
+h2{font-weight:900;font-size:clamp(28px,4vw,38px);line-height:1.25;margin:0 0 12px}
+.sub{color:var(--text2);font-size:17px;margin:0 0 36px;max-width:680px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:0 6px 16px rgba(17,44,70,.10);border-top:4px solid var(--orange)}
+.card h3{margin:0 0 8px;font-size:20px;font-weight:700;line-height:1.4}
+.card p{margin:0;color:var(--text2);font-size:15px}
+.card .en{display:block;margin-top:10px;font-size:14px;color:var(--text2);direction:ltr;text-align:left}
+.why{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.why div{padding:20px;border-inline-start:4px solid var(--navy);background:#fff;border-radius:8px}
+.why b{display:block;font-size:18px;margin-bottom:6px}
+.why span{color:var(--text2);font-size:15px}
+.contact{display:grid;gap:32px;grid-template-columns:1fr;align-items:start}
+@media(min-width:880px){.contact{grid-template-columns:1fr 1.2fr}}
+.info{background:var(--navy);color:#fff;border-radius:var(--radius);padding:28px}
+.info h3{margin:0 0 16px;font-size:22px}
+.info p{margin:0 0 14px;color:#D5DEE7}
+.info a{color:#fff;font-weight:700;text-decoration:none;word-break:break-word}
+.info a:hover{text-decoration:underline}
+.info dt{color:#8FA6BA;font-size:14px}
+.info dd{margin:0 0 14px}
+form{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:600px){form{grid-template-columns:1fr 1fr}form .full{grid-column:1/-1}}
+label{display:grid;gap:6px;font-weight:500;font-size:15px}
+input,select,textarea{font:400 16px 'Thmanyah Sans',sans-serif;color:var(--text);padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;background:#fff;min-height:48px;width:100%}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:1px;border-color:var(--focus)}
+input:invalid:not(:placeholder-shown):not(:focus){border-color:var(--error)}
+.req{color:var(--error)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text2)}
+.consent input{width:20px;height:20px;min-height:20px;flex:0 0 20px;margin-top:3px}
+.note{font-size:13px;color:var(--text2);margin:0}
+.submit{grid-column:1/-1;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.submit button{background:var(--action);color:#fff;border:0;border-radius:8px;padding:14px 30px;font:700 17px 'Thmanyah Sans',sans-serif;cursor:pointer;min-height:48px}
+.submit button[disabled]{opacity:.6;cursor:wait}
+.status{grid-column:1/-1;padding:12px 16px;border-radius:8px;font-size:15px;display:none}
+.status.ok{display:block;background:var(--surface);border-inline-start:4px solid #1E7B4A;color:var(--text)}
+.status.err{display:block;background:var(--surface);border-inline-start:4px solid var(--error);color:var(--error)}
+.hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+footer{background:var(--navy-950);color:#B8C7D5;padding:32px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer a{color:#fff}
+[data-lang-only]{display:none}
+html[lang="en"] .ar-only{display:none}
+html[lang="ar"] .en-only{display:none}
+html[lang="en"] [dir]{direction:ltr}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#top" aria-label="EDRAAK Engineering"><img src="logo/edraak-logo-navy.png" alt="إدراك الهندسية | EDRAAK Engineering" width="160" height="200"></a>
+    <nav aria-label="Main">
+      <a href="#services" data-k="navServices">الخدمات</a>
+      <a href="#why" data-k="navWhy">لماذا إدراك</a>
+      <a href="#contact" data-k="navContact">تواصل معنا</a>
+      <button class="lang" id="langBtn" type="button" aria-label="Switch language">English</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-k="heroTitle">إدراك الهندسية</h1>
+      <p class="tag" data-k="heroTag">الحقيقة تفوق التوقعات</p>
+      <p class="lead" data-k="heroLead">توريد وتركيب وصيانة أنظمة التكييف والتبريد والأعمال الكهربائية والمولدات، بخبرة فنية متخصصة وإشراف هندسي، مع التركيز على السلامة وجودة التشغيل والصيانة الوقائية.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact" data-k="ctaRequest">اطلب معاينة</a>
+        <a class="btn btn-ghost" href="#services" data-k="ctaServices">تعرّف على خدماتنا</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 data-k="svcTitle">خدماتنا</h2>
+      <p class="sub" data-k="svcSub">خدمات معتمدة في مجالات التكييف والتبريد والأعمال الكهربائية والطاقة.</p>
+      <div class="grid">
+        <article class="card"><h3 data-k="s1t">تمديدات كهربائية</h3><p data-k="s1">تنفيذ أعمال التمديدات الكهربائية للمنشآت والمنازل.</p></article>
+        <article class="card"><h3 data-k="s2t">المولدات الكهربائية</h3><p data-k="s2">توريد وتركيب وصيانة المولدات الكهربائية.</p></article>
+        <article class="card"><h3 data-k="s3t">الطاقة الشمسية</h3><p data-k="s3">تنفيذ مشاريع الطاقة الشمسية.</p></article>
+        <article class="card"><h3 data-k="s4t">التكييف والتبريد</h3><p data-k="s4">توريد وتركيب وصيانة أجهزة التكييف والتبريد بأنواعها المختلفة.</p></article>
+        <article class="card"><h3 data-k="s5t">قطع الغيار الأصلية</h3><p data-k="s5">توريد قطع الغيار الأصلية للأجهزة والمعدات.</p></article>
+        <article class="card"><h3 data-k="s6t">الاستشارات الفنية</h3><p data-k="s6">خدمات استشارية لتفادي الأخطاء والأعطال المحتملة.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="alt">
+    <div class="wrap">
+      <h2 data-k="whyTitle">لماذا إدراك الهندسية؟</h2>
+      <p class="sub" data-k="whySub">نعمل بمنهج علمي يركز على سلامة التركيب وكفاءته، ويطيل العمر الافتراضي لمعداتكم.</p>
+      <div class="why">
+        <div><b data-k="w1t">السلامة أولاً</b><span data-k="w1">تركيب سليم وسلس وفق أساليب مهنية.</span></div>
+        <div><b data-k="w2t">صيانة وقائية</b><span data-k="w2">صيانة دورية متعاقد عليها لاكتشاف الأعطال مبكراً.</span></div>
+        <div><b data-k="w3t">قطع غيار أصلية</b><span data-k="w3">توفير قطع غيار أصلية لتشغيل موثوق.</span></div>
+        <div><b data-k="w4t">كوادر متخصصة</b><span data-k="w4">فنيون ذوو خبرة، بإشراف مهندسين متخصصين.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <aside class="info">
+        <h3 data-k="cTitle">تواصل معنا</h3>
+        <p data-k="cSub">أرسل بيانات احتياجك وسيتواصل معك فريقنا لتحديد موعد المعاينة.</p>
+        <dl>
+          <dt data-k="cPhone">الهاتف</dt>
+          <dd><a href="tel:0120066904" dir="ltr">0120066904</a><br><a href="tel:0120066903" dir="ltr">0120066903</a></dd>
+          <dt data-k="cShort">الرقم المختصر</dt>
+          <dd><a href="tel:3229" dir="ltr">3229</a></dd>
+          <dt data-k="cEmail">البريد الإلكتروني</dt>
+          <dd><a href="mailto:edraakengineering@gmail.com" dir="ltr">edraakengineering@gmail.com</a></dd>
+          <dt data-k="cWeb">الموقع الإلكتروني</dt>
+          <dd><a href="https://edraak.net" dir="ltr">edraak.net</a></dd>
+        </dl>
+      </aside>
+
+      <form id="leadForm" novalidate>
+        <input type="hidden" name="access_key" value="acfe5362-3140-4bab-b056-69a81ac62e28">
+        <input type="hidden" name="subject" id="subjectField" value="طلب معاينة جديد من موقع إدراك الهندسية">
+        <input type="hidden" name="from_name" value="موقع إدراك الهندسية">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label><span><span data-k="fName">الاسم الكامل</span> <span class="req">*</span></span>
+          <input name="name" required autocomplete="name" data-ph="phName" placeholder="الاسم الكامل"></label>
+        <label><span><span data-k="fPhone">رقم الجوال</span> <span class="req">*</span></span>
+          <input name="phone" type="tel" required autocomplete="tel" dir="ltr" placeholder="05xxxxxxxx"></label>
+
+        <label><span data-k="fService">نوع الخدمة</span>
+          <select name="service" data-k-opts="svc">
+            <option value="" data-k="optChoose">اختر الخدمة</option>
+            <option value="التمديدات الكهربائية" data-k="s1t">تمديدات كهربائية</option>
+            <option value="المولدات الكهربائية" data-k="s2t">المولدات الكهربائية</option>
+            <option value="الطاقة الشمسية" data-k="s3t">الطاقة الشمسية</option>
+            <option value="التكييف والتبريد" data-k="s4t">التكييف والتبريد</option>
+            <option value="قطع الغيار الأصلية" data-k="s5t">قطع الغيار الأصلية</option>
+            <option value="الاستشارات الفنية" data-k="s6t">الاستشارات الفنية</option>
+          </select></label>
+        <label><span data-k="fPlace">نوع المكان</span>
+          <select name="place_type">
+            <option value="" data-k="optChoose">اختر</option>
+            <option value="منزل" data-k="pHome">منزل أو وحدة سكنية</option>
+            <option value="محل تجاري" data-k="pShop">محل تجاري</option>
+            <option value="منشأة" data-k="pFacility">منشأة أعمال</option>
+            <option value="جهة عامة" data-k="pPublic">مرفق خاص أو عام</option>
+          </select></label>
+
+        <label><span data-k="fCity">المدينة أو الموقع</span>
+          <input name="location" data-ph="phCity" placeholder="المدينة أو الحي"></label>
+        <label><span data-k="fEmail">البريد الإلكتروني (اختياري)</span>
+          <input name="email" type="email" autocomplete="email" dir="ltr" placeholder="name@example.com"></label>
+
+        <label class="full"><span><span data-k="fDetails">وصف الاحتياج</span> <span class="req">*</span></span>
+          <textarea name="message" required data-ph="phDetails" placeholder="صف العطل أو الخدمة المطلوبة باختصار"></textarea></label>
+
+        <label class="full"><span data-k="fDate">موعد مفضل للمعاينة (اختياري)</span>
+          <input name="preferred_date" type="text" data-ph="phDate" placeholder="مثال: الأسبوع القادم صباحاً"></label>
+
+        <label class="full consent"><input type="checkbox" name="consent" required>
+          <span data-k="consent">أوافق على استخدام بياناتي للتواصل بشأن طلبي فقط.</span></label>
+        <p class="note full" data-k="privacy">يُرسل النموذج عبر خدمة Web3Forms إلى بريد الشركة. لا تُستخدم بياناتك لأي غرض آخر.</p>
+
+        <div class="submit">
+          <button type="submit" id="submitBtn" data-k="send">إرسال الطلب</button>
+          <span class="note" data-k="orCall">أو اتصل مباشرة على 0120066904</span>
+        </div>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© إدراك الهندسية | EDRAAK Engineering</span>
+    <span data-k="footTag">الحقيقة تفوق التوقعات</span>
+    <a href="https://aljompolaty.github.io/edraak-design-system/edraak-design-system.html" data-k="footGuide">دليل الهوية</a>
+  </div>
+</footer>
+
+<script>
+const T = {
+  ar: {
+    navServices:'الخدمات', navWhy:'لماذا إدراك', navContact:'تواصل معنا', heroTitle:'إدراك الهندسية',
+    heroTag:'الحقيقة تفوق التوقعات',
+    heroLead:'توريد وتركيب وصيانة أنظمة التكييف والتبريد والأعمال الكهربائية والمولدات، بخبرة فنية متخصصة وإشراف هندسي، مع التركيز على السلامة وجودة التشغيل والصيانة الوقائية.',
+    ctaRequest:'اطلب معاينة', ctaServices:'تعرّف على خدماتنا',
+    svcTitle:'خدماتنا', svcSub:'خدمات معتمدة في مجالات التكييف والتبريد والأعمال الكهربائية والطاقة.',
+    s1t:'تمديدات كهربائية', s1:'تنفيذ أعمال التمديدات الكهربائية للمنشآت والمنازل.',
+    s2t:'المولدات الكهربائية', s2:'توريد وتركيب وصيانة المولدات الكهربائية.',
+    s3t:'الطاقة الشمسية', s3:'تنفيذ مشاريع الطاقة الشمسية.',
+    s4t:'التكييف والتبريد', s4:'توريد وتركيب وصيانة أجهزة التكييف والتبريد بأنواعها المختلفة.',
+    s5t:'قطع الغيار الأصلية', s5:'توريد قطع الغيار الأصلية للأجهزة والمعدات.',
+    s6t:'الاستشارات الفنية', s6:'خدمات استشارية لتفادي الأخطاء والأعطال المحتملة.',
+    whyTitle:'لماذا إدراك الهندسية؟', whySub:'نعمل بمنهج علمي يركز على سلامة التركيب وكفاءته، ويطيل العمر الافتراضي لمعداتكم.',
+    w1t:'السلامة أولاً', w1:'تركيب سليم وسلس وفق أساليب مهنية.',
+    w2t:'صيانة وقائية', w2:'صيانة دورية متعاقد عليها لاكتشاف الأعطال مبكراً.',
+    w3t:'قطع غيار أصلية', w3:'توفير قطع غيار أصلية لتشغيل موثوق.',
+    w4t:'كوادر متخصصة', w4:'فنيون ذوو خبرة، بإشراف مهندسين متخصصين.',
+    cTitle:'تواصل معنا', cSub:'أرسل بيانات احتياجك وسيتواصل معك فريقنا لتحديد موعد المعاينة.',
+    cPhone:'الهاتف', cShort:'الرقم المختصر', cEmail:'البريد الإلكتروني', cWeb:'الموقع الإلكتروني',
+    fName:'الاسم الكامل', fPhone:'رقم الجوال', fService:'نوع الخدمة', optChoose:'اختر',
+    fPlace:'نوع المكان', pHome:'منزل أو وحدة سكنية', pShop:'محل تجاري', pFacility:'منشأة أعمال', pPublic:'مرفق خاص أو عام',
+    fCity:'المدينة أو الموقع', fEmail:'البريد الإلكتروني (اختياري)', fDetails:'وصف الاحتياج',
+    fDate:'موعد مفضل للمعاينة (اختياري)', consent:'أوافق على استخدام بياناتي للتواصل بشأن طلبي فقط.',
+    privacy:'يُرسل النموذج عبر خدمة Web3Forms إلى بريد الشركة. لا تُستخدم بياناتك لأي غرض آخر.',
+    send:'إرسال الطلب', sending:'جارٍ الإرسال…', orCall:'أو اتصل مباشرة على 0120066904',
+    okMsg:'تم استلام طلبك. سيتواصل معك فريقنا قريباً.',
+    errMsg:'تعذّر إرسال الطلب. تحقّق من الاتصال وأعد المحاولة، أو اتصل مباشرة على 0120066904.',
+    footTag:'الحقيقة تفوق التوقعات', footGuide:'دليل الهوية',
+    subject:'طلب معاينة جديد من موقع إدراك الهندسية',
+    phName:'الاسم الكامل', phCity:'المدينة أو الحي', phDetails:'صف العطل أو الخدمة المطلوبة باختصار', phDate:'مثال: الأسبوع القادم صباحاً'
+  },
+  en: {
+    navServices:'Services', navWhy:'Why EDRAAK', navContact:'Contact', heroTitle:'EDRAAK Engineering',
+    heroTag:'Reality exceeds expectations',
+    heroLead:'Supply, installation and maintenance of air conditioning, refrigeration, electrical works and generators, delivered with specialized technical experience and engineering supervision, focusing on safety, operational quality and preventive maintenance.',
+    ctaRequest:'Request an inspection', ctaServices:'Explore our services',
+    svcTitle:'Our services', svcSub:'Approved services in air conditioning, refrigeration, electrical works and energy.',
+    s1t:'Electrical installations', s1:'Electrical distribution and installation works for facilities and homes.',
+    s2t:'Electric generators', s2:'Supply, installation and maintenance of electric generators.',
+    s3t:'Solar energy', s3:'Implementation of solar energy projects.',
+    s4t:'Air conditioning & refrigeration', s4:'Supply, installation and maintenance of air conditioning and refrigeration systems of all types.',
+    s5t:'Original spare parts', s5:'Supply of original spare parts for equipment and machinery.',
+    s6t:'Technical consultancy', s6:'Consultancy services to help avoid potential errors and breakdowns.',
+    whyTitle:'Why EDRAAK Engineering?', whySub:'We follow a scientific approach focused on safe, efficient installation and a longer service life for your equipment.',
+    w1t:'Safety first', w1:'Smooth, safe installation using professional methods.',
+    w2t:'Preventive maintenance', w2:'Contracted periodic maintenance to detect faults early.',
+    w3t:'Original spare parts', w3:'Original parts supplied for reliable operation.',
+    w4t:'Specialized team', w4:'Experienced technicians supervised by specialized engineers.',
+    cTitle:'Contact us', cSub:'Send us your requirements and our team will contact you to arrange an inspection.',
+    cPhone:'Phone', cShort:'Short number', cEmail:'Email', cWeb:'Website',
+    fName:'Full name', fPhone:'Mobile number', fService:'Service type', optChoose:'Select',
+    fPlace:'Property type', pHome:'Home or residential unit', pShop:'Commercial shop', pFacility:'Business facility', pPublic:'Private or public facility',
+    fCity:'City or location', fEmail:'Email (optional)', fDetails:'Describe your requirement',
+    fDate:'Preferred inspection time (optional)', consent:'I agree that my details may be used only to contact me about this request.',
+    privacy:'The form is sent through Web3Forms to the company inbox. Your details are not used for any other purpose.',
+    send:'Send request', sending:'Sending…', orCall:'Or call us directly on 0120066904',
+    okMsg:'Request received. Our team will contact you shortly.',
+    errMsg:"We couldn't send your request. Check your connection and try again, or call 0120066904 directly.",
+    footTag:'Reality exceeds expectations', footGuide:'Brand guide',
+    subject:'New inspection request from the EDRAAK Engineering website',
+    phName:'Full name', phCity:'City or neighbourhood', phDetails:'Briefly describe the fault or service needed', phDate:'e.g. next week, mornings'
+  }
+};
+
+let lang = 'ar';
+function applyLang(l) {
+  lang = l;
+  const dict = T[l];
+  document.documentElement.lang = l;
+  document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-k]').forEach(el => {
+    const v = dict[el.dataset.k];
+    if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-ph]').forEach(el => {
+    el.placeholder = dict[el.dataset.ph] || el.placeholder;
+  });
+  document.getElementById('subjectField').value = dict.subject;
+  document.getElementById('langBtn').textContent = l === 'ar' ? 'English' : 'العربية';
+  document.getElementById('submitBtn').textContent = dict.send;
+  document.getElementById('status').className = 'status';
+  document.getElementById('status').textContent = '';
+  localStorage.setItem('edraak-lang', l);
+}
+document.getElementById('langBtn').addEventListener('click', () => applyLang(lang === 'ar' ? 'en' : 'ar'));
+
+const form = document.getElementById('leadForm');
+const statusEl = document.getElementById('status');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  statusEl.className = 'status'; statusEl.textContent = '';
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true; btn.textContent = T[lang].sending;
+  try {
+    const data = Object.fromEntries(new FormData(form));
+    data.consent = form.consent.checked ? 'Yes' : 'No';
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const json = await res.json();
+    if (json.success) {
+      statusEl.className = 'status ok'; statusEl.textContent = T[lang].okMsg;
+      form.reset(); applyLang(lang);
+      statusEl.className = 'status ok'; statusEl.textContent = T[lang].okMsg;
+    } else {
+      throw new Error(json.message || 'send failed');
+    }
+  } catch (err) {
+    statusEl.className = 'status err'; statusEl.textContent = T[lang].errMsg;
+  } finally {
+    btn.disabled = false; btn.textContent = T[lang].send;
+  }
+});
+
+applyLang(localStorage.getItem('edraak-lang') === 'en' ? 'en' : 'ar');
+</script>
+</body>
+</html>
